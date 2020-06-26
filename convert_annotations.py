@@ -8,6 +8,8 @@ import fileinput
 # function that turns XMin, YMin, XMax, YMax coordinates to normalized yolo format
 def convert(filename_str, coords):
     os.chdir("..")
+    
+    '''
     image = cv2.imread(filename_str + ".jpg")
     coords[2] -= coords[0]
     coords[3] -= coords[1]
@@ -19,6 +21,7 @@ def convert(filename_str, coords):
     coords[1] /= int(image.shape[0])
     coords[2] /= int(image.shape[1])
     coords[3] /= int(image.shape[0])
+    '''
     os.chdir("Label")
     return coords
 
